@@ -1,10 +1,12 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
+	headerContainer: {
+		flex: 1,
+		backgroundColor: '#000'
     },
-});
+    headerTitle: {
+        fontSize: 26,
+        color: '#fff'
+    }
+})
