@@ -1,6 +1,6 @@
 # anamaria
 
-To run the application, on your terminal you can type this command: 
+To run the application, on your terminal type this command: 
 
 `npm run start`
 
