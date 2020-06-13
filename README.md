@@ -1,5 +1,7 @@
 # anamaria
 
+First of all run `npm install` to install all dependencies 
+
 To run the application, on your terminal type this command: 
 
 `npm run start`
