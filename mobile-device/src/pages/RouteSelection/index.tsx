@@ -7,7 +7,7 @@ import styles from './styles'
 const RouteSelection = () => {
 	const [initialLocation, setInitialLocation] = useState<string>('')
 	const [destination, setDestination] = useState<string>('')
-	const [locationForMap, setLocationForMap] = useState<LocationForMap>()
+	const [initialLocationForMap, setInitialLocationForMap] = useState<LocationForMap>()
 	const [loading, setLoading] = useState<boolean>(false)
 	const key = 'AIzaSyBwJpOTDp1D6GOSGdGTATiCSN84gFEzuJE'
 	const navigation = useNavigation()
@@ -26,7 +26,7 @@ const RouteSelection = () => {
 						},
 					} = locationData.results[0]
 
-					setLocationForMap({ ...locationForMap, latitudeFrom: lat, longitudeFrom: lng })
+					setInitialLocationForMap({ latitudeFrom: lat, longitudeFrom: lng })
 
 					setLoading(false)
 				} else {
@@ -47,8 +47,7 @@ const RouteSelection = () => {
 						},
 					} = locationData.results[0]
 
-					setLocationForMap({ ...locationForMap, latitudeTo: lat, longitudeTo: lng })
-					navigation.navigate('Map', { locationForMap })
+					navigation.navigate('Map', { ...initialLocationForMap, latitudeTo: lat, longitudeTo: lng })
 				} else {
 					Alert.alert('Não encontramos o endereço')
 				}

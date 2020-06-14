@@ -1,20 +1,19 @@
 import React from 'react'
-import { StyleSheet, View, StatusBar, KeyboardAvoidingView, Platform } from 'react-native'
+import { StyleSheet, StatusBar, View } from 'react-native'
 import Routes from './src/routes'
 
 export default function App() {
 	return (
-		<>
-			<StatusBar barStyle="dark-content" backgroundColor="transparent" translucent />
+		<View style={styles.container}>
+			<StatusBar barStyle="dark-content" backgroundColor="#ffa608" translucent />
 			<Routes />
-		</>
+		</View>
 	)
 }
 
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		marginVertical: 40,
 		backgroundColor: '#fff',
 	},
 })
