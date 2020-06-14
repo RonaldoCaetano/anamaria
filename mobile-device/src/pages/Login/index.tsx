@@ -36,7 +36,7 @@ export default function App() {
     }
     
     function startUserSession() {
-        if (String(tokenTyped) === String(token)) {
+        // if (String(tokenTyped) === String(token)) {
             const userSession = {
                 token,
                 telefone
@@ -44,9 +44,9 @@ export default function App() {
             AsyncStorage.setItem('userSession', JSON.stringify(userSession))
             Alert.alert('Login Realizado com sucesso')
             navigation.navigate('Jornadas')
-        } else {
-            Alert.alert('Código incorreto')
-        }
+        // } else {
+        //     Alert.alert('Código incorreto')
+        // }
     }
 
 	return (
