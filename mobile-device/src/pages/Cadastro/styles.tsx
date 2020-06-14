@@ -24,11 +24,7 @@ export default StyleSheet.create({
 		height: 50,
 		color: 'white',
 	},
-	forgot: {
-		color: 'white',
-		fontSize: 11,
-	},
-	loginBtn: {
+	cadastrarBtn: {
 		width: '80%',
 		backgroundColor: '#ffa608',
 		borderRadius: 25,
@@ -38,7 +34,12 @@ export default StyleSheet.create({
 		marginTop: 40,
 		marginBottom: 10,
 	},
-	loginText: {
+	cadastrarText: {
 		color: 'white',
+	},
+	cadastrarHeaderText: {
+		color: 'white',
+		fontSize: 30,
+		margin: 5,
 	},
 })
