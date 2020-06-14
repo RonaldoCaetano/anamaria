@@ -9,7 +9,10 @@ export default function App() {
 			<Image style={styles.logotipo} source={require('../../../assets/alongamento.png')} />
 
 			<Text style={styles.esquecerHeaderText}>Que tal um alongamento?</Text>
-            <Text style={styles.esquecerText}>Você sabia? O alongamento previne dores, evita cãibras, facilita o relaxamento muscular e reativa a circulação.</Text>
+			<Text style={styles.esquecerText}>
+				Você sabia? O alongamento previne dores, evita cãibras, facilita o relaxamento muscular e reativa a
+				circulação.
+			</Text>
 
 			<TouchableOpacity style={styles.esquecerBtn}>
 				<Text style={styles.esquecerText}>OK</Text>

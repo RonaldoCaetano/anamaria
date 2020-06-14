@@ -11,6 +11,8 @@ import ListaJornadas from './pages/ListaJornadas'
 import PontosParadas from './pages/ListaPontosParadas'
 import IOSIcon from 'react-native-vector-icons/Ionicons'
 import SideBarMenu from './components/SideMenu'
+import Recompensas from './pages/ListaRecompensas'
+import PostosGasolina from './pages/ListaPostosGasolina'
 
 const AppStack = createStackNavigator()
 
@@ -57,6 +59,8 @@ const Routes = () => {
 				<AppStack.Screen name="PontosParadas" component={PontosParadas} />
 				<AppStack.Screen name="RouteSelection" component={RouteSelection} />
 				<AppStack.Screen name="Map" component={Map} />
+                <AppStack.Screen name="Recompensas" component={Recompensas} />
+                <AppStack.Screen name="PostosGasolina" component={PostosGasolina} />
 				<AppStack.Screen name="SideBarMenu" component={SideBarMenu} />
 			</AppStack.Navigator>
 		</NavigationContainer>

@@ -26,6 +26,12 @@ const SideMenu = () => {
                     <TouchableOpacity style={styles.navItem} onPress={() => navigateToScreen('RouteSelection')}>
                         <Text style={styles.navItemText}>Definir Rotas</Text>
                     </TouchableOpacity>
+                    <TouchableOpacity style={styles.navItem} onPress={() => navigateToScreen('Recompensas')}>
+                        <Text style={styles.navItemText}>Listar Recompensas</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.navItem} onPress={() => navigateToScreen('PostosGasolina')}>
+                        <Text style={styles.navItemText}>Listar Postos de Gasolina</Text>
+                    </TouchableOpacity>
 				</View>
 			</ScrollView>
 			<View style={styles.footerContainer}>
