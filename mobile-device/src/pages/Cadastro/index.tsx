@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Text, View, TextInput, TouchableOpacity, Image } from 'react-native'
+import { Text, View, TextInput, TouchableOpacity, Image, AsyncStorage, Alert } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import api from './../../api'
 
@@ -12,13 +12,18 @@ export default function App() {
     
     function setUserSession() {
 
-        api.post(`/user`, { email, telefone })
+        const userData = { email, telefone, qtde_milhas: 0 }
+
+        api.post(`/user`, userData)
 			.then(({ data }) => {
                 if (data) {
-                    console.log(data)
+                    AsyncStorage.setItem('userSession', JSON.stringify(userData))
+                    navigation.navigate('Jornadas')
+                } else {
+                    Alert.alert('Houve um erro ao realizar o seu cadastro.')
                 }
 			})
-			.catch((error) => console.log(error))
+			.catch(() => Alert.alert('Houve um erro ao realizar o seu cadastro.'))
     }
 
 	return (
