@@ -40,5 +40,17 @@ export default StyleSheet.create({
 	},
 	loginText: {
 		color: 'white',
+    },
+    confirmButton: {
+		width: '90%',
+	},
+	button: {
+		backgroundColor: 'green',
+		height: 60,
+		flexDirection: 'row',
+		borderRadius: 10,
+		overflow: 'hidden',
+		alignItems: 'center',
+		marginTop: 15,
 	},
 })

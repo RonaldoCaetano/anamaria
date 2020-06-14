@@ -1,9 +1,13 @@
 import React from 'react'
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image } from 'react-native'
+import { Text, View, TextInput, TouchableOpacity, Image } from 'react-native'
+import { RectButton } from 'react-native-gesture-handler'
+import { useNavigation } from '@react-navigation/native'
 
 import styles from './styles'
 
 export default function App() {
+	const navigation = useNavigation()
+
 	return (
 		<View style={styles.container}>
 			<Image style={styles.logotipo} source={require('../../../assets/logotipo.png')} />
@@ -21,10 +25,10 @@ export default function App() {
 			<TouchableOpacity>
 				<Text style={styles.forgot}>Esqueceu a senha?</Text>
 			</TouchableOpacity>
-			<TouchableOpacity style={styles.loginBtn}>
+			<RectButton style={styles.loginBtn} onPress={() => navigation.navigate('RouteSelection')}>
 				<Text style={styles.loginText}>ENTRAR</Text>
-			</TouchableOpacity>
-			<TouchableOpacity>
+			</RectButton>
+            <TouchableOpacity>
 				<Text style={styles.loginText}>Cadastrar</Text>
 			</TouchableOpacity>
 		</View>

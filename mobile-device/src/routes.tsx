@@ -22,7 +22,7 @@ const Routes = () => {
 			>
                 <AppStack.Screen name="Login" component={Login} />
                 <AppStack.Screen name="Cadastro" component={Cadastrar} />
-                <AppStack.Screen name="Cadastro" component={EsquecerSenha} />
+                <AppStack.Screen name="EsquecerSenha" component={EsquecerSenha} />
 				<AppStack.Screen name="RouteSelection" component={RouteSelection} />
                 <AppStack.Screen name="Map" component={Map} />
 			</AppStack.Navigator>
