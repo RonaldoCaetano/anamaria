@@ -13,8 +13,8 @@ export default class UsersController {
     }
 
     async show(req: Request, res: Response) {
-        const { params: { email } } = req
-        connection.query(`SELECT * FROM cd_usuarios WHERE email = '${email}'`, (err: any, result: any) => {
+        const { params: { telefone } } = req
+        connection.query(`SELECT * FROM cd_usuarios WHERE telefone = '${telefone}'`, (err: any, result: any) => {
             if (err) {
                 res.status(400).send(err)
             }
@@ -35,6 +35,5 @@ export default class UsersController {
                 res.status(200).send(result);
             }
         )
-
     }
 }
