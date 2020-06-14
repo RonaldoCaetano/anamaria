@@ -5,8 +5,6 @@ export default class SMSController {
     async create(req: Request, res: Response) {
         const { body: { phone } } = req
 
-        console.log(phone)
-
         const nexmo = new Nexmo({
             apiKey: '220bce16',
             apiSecret: 'VG5oIuUtNmY2yULw',

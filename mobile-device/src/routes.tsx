@@ -21,6 +21,7 @@ import CadastroVeiculos from './pages/CadastroVeiculos'
 import CheckList from './pages/CheckList'
 import Perfil from './pages/Perfil'
 import PontosDeParada from './pages/PontodeParada'
+import SOSNumbers from './pages/SOSNumbers'
 
 const AppStack = createStackNavigator()
 
@@ -78,6 +79,7 @@ const Routes = () => {
 				<AppStack.Screen name="CheckList" component={CheckList} />
 				<AppStack.Screen name="Perfil" component={Perfil} />
 				<AppStack.Screen name="PontosDeParada" component={PontosDeParada} />
+                <AppStack.Screen name="SOSNumbers" component={SOSNumbers} />
 				<AppStack.Screen name="SideBarMenu" component={SideBarMenu} />
 			</AppStack.Navigator>
 		</NavigationContainer>
