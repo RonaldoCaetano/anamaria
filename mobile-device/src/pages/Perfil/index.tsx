@@ -2,8 +2,10 @@ import React from 'react'
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image } from 'react-native'
 
 import styles from './styles'
+import { useNavigation } from '@react-navigation/native'
 
 export default function App() {
+    const navigation = useNavigation()
   return (
     <View style={styles.container}>
       <Image
@@ -16,42 +18,42 @@ export default function App() {
      <View style={styles.inputView} >
         <TextInput
           style={styles.inputText}
-          placeholder="ID MILHAS"
+          placeholder="#12345"
           placeholderTextColor="#FFF" />
       </View>
       
       <View style={styles.inputView} >
         <TextInput
           style={styles.inputText}
-          placeholder="Usuário"
+          placeholder="JOAO MARCOS FERNANDES"
           placeholderTextColor="#FFF" />
       </View>
       <View style={styles.inputView} >
         <TextInput
           secureTextEntry
           style={styles.inputText}
-          placeholder="Senha"
+          value="XXXXXXXXXXXXXXXXXXXXXXX"
           placeholderTextColor="#FFF" />
       </View>
       <View style={styles.inputView} >
         <TextInput
           style={styles.inputText}
-          placeholder="Email"
+          placeholder="marquinho.joao.pf@gmail.com"
           placeholderTextColor="#FFF" />
       </View>
       <View style={styles.inputView} >
         <TextInput
           style={styles.inputText}
-          placeholder="Telefone"
+          placeholder="11954769550"
           placeholderTextColor="#FFF" />
       </View>
       <TouchableOpacity style={styles.cadastrarBtn}>
         <Text style={styles.cadastrarText}>SALVAR</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.salvarBtn}>
+      <TouchableOpacity style={styles.salvarBtn} onPress={() => navigation.navigate('CadastroVeiculos')}>
         <Text style={styles.cadastrarText}>ADICIONAR VEÍCULO</Text>
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('Jornadas')}>
         <Text style={styles.cadastrarText}>Voltar</Text>
       </TouchableOpacity>
     </View>
