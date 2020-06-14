@@ -1,13 +1,12 @@
 import express from 'express'
-import routes from './routes'
 import cors from 'cors'
+
+import routes from './routes'
 
 const app = express();
 
+app.use(cors())
 app.use(express.json())
 app.use(routes)
-app.use(cors)
 
-app.listen(3333, function () {
-    console.log('Server is running.. on Port 4000');
-});
+app.listen(3333)

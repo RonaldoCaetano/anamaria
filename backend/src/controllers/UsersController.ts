@@ -11,4 +11,29 @@ export default class UsersController {
             res.status(200).send(result.rows);
         });
     }
+
+    async show(req: Request, res: Response) {
+        const { params: { telefone } } = req
+        connection.query(`SELECT * FROM cd_usuarios WHERE telefone = '${telefone}'`, (err: any, result: any) => {
+            if (err) {
+                res.status(400).send(err)
+            }
+            res.status(200).send(result.rows);
+        })
+    }
+
+    async create(req: Request, res: Response) {
+        const { login, senha, email, qtde_milhas, telefone } = req.body
+
+        connection.query(`
+            INSERT INTO cd_usuarios(login, senha, email, qtde_milhas, telefone) 
+            VALUES('${login}', '${senha}', '${email}', ${qtde_milhas}, '${telefone}')`, 
+            (err: any, result: any) => {
+                if (err) {
+                    res.status(400).send(err)
+                }
+                res.status(200).send(result);
+            }
+        )
+    }
 }
