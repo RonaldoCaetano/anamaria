@@ -14,10 +14,6 @@ export default function App() {
     const [token, setToken] = useState<string>('')
     const [tokenTyped, setTokenTypes] = useState<string>('')
 
-    if (AsyncStorage.getItem('userSession')) {
-        navigation.navigate('Jornadas')
-    }
-
 	function sendToken() {
 		api.post(`/token`, { phone: telefone })
 			.then(({ data }) => {
