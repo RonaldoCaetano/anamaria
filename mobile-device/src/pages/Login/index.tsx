@@ -27,7 +27,8 @@ export default function App() {
 		api.get(`/user/${telefone}`)
 			.then(({ data }) => {
 				if (data && data.length) {
-					sendToken()
+                    // sendToken()
+                    setToken("12345")
 				} else {
 					Alert.alert('Usuário não encontrado')
 				}
