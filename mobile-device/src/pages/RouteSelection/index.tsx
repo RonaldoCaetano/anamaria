@@ -7,13 +7,13 @@ import styles from './styles'
 const RouteSelection = () => {
 	const [initialLocation, setInitialLocation] = useState<string>('')
 	const [destination, setDestination] = useState<string>('')
-    const [locationForMap, setLocationForMap] = useState<LocationForMap>()
-    const [loading, setLoading] = useState<boolean>(false)
+	const [locationForMap, setLocationForMap] = useState<LocationForMap>()
+	const [loading, setLoading] = useState<boolean>(false)
 	const key = 'AIzaSyBwJpOTDp1D6GOSGdGTATiCSN84gFEzuJE'
 	const navigation = useNavigation()
 
 	function defineInitialPosition() {
-        setLoading(true)
+		setLoading(true)
 		fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${initialLocation}&sensor=false&key=${key}`)
 			.then((res) => res.json())
 			.then((locationData: GoogleAPIResponse) => {
@@ -26,10 +26,9 @@ const RouteSelection = () => {
 						},
 					} = locationData.results[0]
 
-                    setLocationForMap({ ...locationForMap, latitudeFrom: lat, longitudeFrom: lng })
+					setLocationForMap({ ...locationForMap, latitudeFrom: lat, longitudeFrom: lng })
 
-                    setLoading(false)
-                    
+					setLoading(false)
 				} else {
 					Alert.alert('Não encontramos o endereço')
 				}
@@ -41,15 +40,15 @@ const RouteSelection = () => {
 			.then((res) => res.json())
 			.then((locationData: GoogleAPIResponse) => {
 				if (locationData.results.length) {
-                    setDestination(locationData.results[0].formatted_address)
-                    const {
+					setDestination(locationData.results[0].formatted_address)
+					const {
 						geometry: {
 							location: { lat, lng },
 						},
 					} = locationData.results[0]
 
-                    setLocationForMap({ ...locationForMap, latitudeTo: lat, longitudeTo: lng })                    
-                    navigation.navigate('Map', { locationForMap })
+					setLocationForMap({ ...locationForMap, latitudeTo: lat, longitudeTo: lng })
+					navigation.navigate('Map', { locationForMap })
 				} else {
 					Alert.alert('Não encontramos o endereço')
 				}
@@ -73,10 +72,14 @@ const RouteSelection = () => {
 					value={destination}
 					placeholder="Destino"
 					autoCorrect={true}
-                    onChangeText={setDestination}
-                    enabled={loading ? false : true}
+					onChangeText={setDestination}
+					enabled={loading ? false : true}
 				/>
-				<RectButton enabled={loading ? false : true} style={[styles.confirmButton, styles.button]} onPress={defineDestination}>
+				<RectButton
+					enabled={loading ? false : true}
+					style={[styles.confirmButton, styles.button]}
+					onPress={defineDestination}
+				>
 					<Text style={styles.buttonText}>Confirmar percurso</Text>
 				</RectButton>
 			</View>

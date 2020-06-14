@@ -5,22 +5,22 @@ export default StyleSheet.create({
 		flex: 1,
 		justifyContent: 'center',
 		alignItems: 'center',
-    },
-    containerTitle: {
-        fontSize: 32,
-        marginBottom: 20
-    },
-    useLocationContainer: {
-        position: 'relative',
-        width: '90%'
-    },
-    useLocationButton: {
-        width: 200,
-        position: 'relative',
-    },
-    confirmButton: {
-        width: '90%',
-    },
+	},
+	containerTitle: {
+		fontSize: 32,
+		marginBottom: 20,
+	},
+	useLocationContainer: {
+		position: 'relative',
+		width: '90%',
+	},
+	useLocationButton: {
+		width: 200,
+		position: 'relative',
+	},
+	confirmButton: {
+		width: '90%',
+	},
 	button: {
 		backgroundColor: 'green',
 		height: 60,
@@ -43,7 +43,7 @@ export default StyleSheet.create({
 		borderRadius: 10,
 		marginBottom: 8,
 		paddingHorizontal: 24,
-        fontSize: 16,
-        width: '90%'
+		fontSize: 16,
+		width: '90%',
 	},
 })

@@ -24,7 +24,7 @@ export default StyleSheet.create({
 		height: 50,
 		color: 'white',
 	},
-	esquecerBtn: {
+	cadastrarBtn: {
 		width: '80%',
 		backgroundColor: '#ffa608',
 		borderRadius: 25,
@@ -34,10 +34,10 @@ export default StyleSheet.create({
 		marginTop: 40,
 		marginBottom: 10,
 	},
-	esquecerText: {
+	cadastrarText: {
 		color: 'white',
 	},
-	esquecerHeaderText: {
+	cadastrarHeaderText: {
 		color: 'white',
 		fontSize: 30,
 		margin: 5,

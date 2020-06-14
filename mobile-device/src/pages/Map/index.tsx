@@ -13,9 +13,9 @@ const MapComponent = () => {
 
 	if (!routeParams.locationForMap) {
 		return <></>
-    }
-    
-    console.log(routeParams)
+	}
+
+	console.log(routeParams)
 
 	return (
 		<View style={styles.mapContainer}>
@@ -38,14 +38,14 @@ const MapComponent = () => {
 					origin={{
 						latitude: routeParams.locationForMap.latitudeFrom,
 						longitude: routeParams.locationForMap.longitudeFrom,
-                    }}
-                    destination={{
-                        latitude: routeParams.locationForMap.latitudeTo,
+					}}
+					destination={{
+						latitude: routeParams.locationForMap.latitudeTo,
 						longitude: routeParams.locationForMap.longitudeTo,
-                    }}
-                    apikey="AIzaSyBwJpOTDp1D6GOSGdGTATiCSN84gFEzuJE"
-                    strokeWidth={3}
-                    strokeColor="hotpink"
+					}}
+					apikey="AIzaSyBwJpOTDp1D6GOSGdGTATiCSN84gFEzuJE"
+					strokeWidth={3}
+					strokeColor="hotpink"
 				/>
 			</MapView>
 
