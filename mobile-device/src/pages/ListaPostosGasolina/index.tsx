@@ -8,20 +8,17 @@ export default function App() {
     <ScrollView style={styles.scroll}>
     <View style={styles.container}>
 
-      <Text style={styles.esquecerHeaderText}>Pontos de Parada</Text>
+      <Text style={styles.esquecerHeaderText}>Posto de Gasolina</Text>
       <TouchableOpacity style={styles.novaJornada}>
-              <Text style={styles.text}>PESQUISAR</Text>
+              <Text style={styles.text}>ORDERNAR PELO MENOR PREÇO</Text>
       </TouchableOpacity>
 
       <TouchableOpacity>
         <View style={styles.card}>
 
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-          <Image style={styles.logotipo} source={require('../../../assets/pontosdeparada.png')} />
-            <Text style={styles.esquecerHeaderText}>CCR - STOP 1</Text>
-            <TouchableOpacity style={styles.buttonInicio}>
-              <Text style={styles.text}>PLUS</Text>
-            </TouchableOpacity>
+          <Image style={styles.logotipo} source={require('../../../assets/postosgasolina.png')} />
+            <Text style={styles.esquecerHeaderText}>POSTO - SHELL 1</Text>
           </View>
 
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
@@ -44,11 +41,8 @@ export default function App() {
         <View style={styles.card}>
 
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-          <Image style={styles.logotipo} source={require('../../../assets/pontosdeparada.png')} />
-            <Text style={styles.esquecerHeaderText}>CCR - STOP 2</Text>
-            <TouchableOpacity style={styles.buttonInicio}>
-              <Text style={styles.text}>PLUS</Text>
-            </TouchableOpacity>
+          <Image style={styles.logotipo} source={require('../../../assets/postosgasolina.png')} />
+            <Text style={styles.esquecerHeaderText}>POSTO - IPIRAN 2</Text>
           </View>
 
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
@@ -71,11 +65,8 @@ export default function App() {
         <View style={styles.card}>
 
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-          <Image style={styles.logotipo} source={require('../../../assets/pontosdeparada.png')} />
-            <Text style={styles.esquecerHeaderText}>CCR - STOP 3</Text>
-            <TouchableOpacity style={styles.buttonFinalizada}>
-              <Text style={styles.text}>NORMAL</Text>
-            </TouchableOpacity>
+          <Image style={styles.logotipo} source={require('../../../assets/postosgasolina.png')} />
+            <Text style={styles.esquecerHeaderText}>POSTO - PETRO 3</Text>
           </View>
 
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>

@@ -10,10 +10,6 @@ export default StyleSheet.create({
 	logotipo: {
 		width: 250,
 		height: 250,
-    },
-    prato: {
-		width: 50,
-		height: 50,
 	},
 	inputView: {
 		width: '80%',
@@ -47,20 +43,5 @@ export default StyleSheet.create({
 		color: 'white',
 		fontSize: 30,
 		margin: 5,
-    },
-    card: {
-        width: "95%",
-        backgroundColor: "#465881",
-        borderRadius: 15,
-        marginBottom: 20,
-        justifyContent: "center",
-        padding: 20
-    },
-    checkboxContainer: {
-        flexDirection: "row",
-        marginBottom: 20,
-      },
-      checkbox: {
-        alignSelf: "center",
-      },
+	},
 })
