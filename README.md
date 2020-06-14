@@ -1,11 +1,20 @@
-# anamaria
+# AnaMaria
 
-First of all run `npm install` to install all dependencies 
+O nome é inspirado na gíria utilizada por muitos caminhoneiros, que segnifica AM (Amplitude modulada)
 
-To run the application, on your terminal type this command: 
+## Como utilizar
 
-`npm run start`
+Para realizar os testes no app, primeiramente devemos dar um `npm install` dentro das pastas: **mobile-device** e **backend**.
 
-It will start the application and a new window will be open on your browser.
+Após isso, devemos, dentro da pasta backend, rodar o comando `npm run dev` para estar o servidor local que contem as apis
 
-You can scan the QRCode with your phone to test it.
+Com o backend rodando, vamos na pasta `device-mobile` e rodamos o comando `npm start` para iniciar a compilação dos arquivos mobile
+
+Um último passo para que todas as apis funcionem corretamente, você precisa trocar o **ip** que estã inserido dentro do arquivo `api.ts`, no caso apenas substituir pelo seu.
+
+*Obs: Mantenha a porta 3333, dentro do arquivo `api.ts`, pois o backend está rodando nessa porta.*
+
+## Workspace setup
+
+- Node: 13.8.0
+- npm: 6.13.6
