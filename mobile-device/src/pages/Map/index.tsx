@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text } from 'react-native'
 import { RectButton } from 'react-native-gesture-handler'
 import { useNavigation, useRoute } from '@react-navigation/native'
-import MapView from 'react-native-maps'
+import MapView, { Marker } from 'react-native-maps'
 import MapViewDirections from 'react-native-maps-directions'
 import styles from './styles'
 
@@ -11,11 +11,11 @@ const MapComponent = () => {
 	const route = useRoute()
 	const routeParams: any = route.params
 
-	if (!routeParams.locationForMap) {
+	console.log(routeParams)
+
+	if (!routeParams.latitudeTo) {
 		return <></>
 	}
-
-	console.log(routeParams)
 
 	return (
 		<View style={styles.mapContainer}>
@@ -28,24 +28,39 @@ const MapComponent = () => {
 			<MapView
 				style={styles.mapComponent}
 				initialRegion={{
-					latitude: routeParams.locationForMap.latitudeFrom,
-					longitude: routeParams.locationForMap.longitudeFrom,
+					latitude: routeParams.latitudeFrom,
+					longitude: routeParams.longitudeFrom,
 					latitudeDelta: 0.03,
 					longitudeDelta: 0.03,
 				}}
 			>
+				<Marker
+					key="coordinate_a"
+					coordinate={{ latitude: routeParams.latitudeFrom, longitude: routeParams.longitudeFrom }}
+				/>
+				<Marker
+					key="coordinate_b"
+					coordinate={{ latitude: routeParams.latitudeTo, longitude: routeParams.longitudeTo }}
+				/>
 				<MapViewDirections
 					origin={{
-						latitude: routeParams.locationForMap.latitudeFrom,
-						longitude: routeParams.locationForMap.longitudeFrom,
-					}}
-					destination={{
-						latitude: routeParams.locationForMap.latitudeTo,
-						longitude: routeParams.locationForMap.longitudeTo,
+						latitude: routeParams.latitudeFrom,
+						longitude: routeParams.longitudeFrom,
                     }}
-                    apikey="AIzaSyBwJpOTDp1D6GOSGdGTATiCSN84gFEzuJE"
-                    strokeWidth={5}
-                    strokeColor="hotpink"
+                    waypoints={[{latitude: -23.0127549, longitude: -46.8249054}]}
+					destination={{
+						latitude: routeParams.latitudeTo,
+						longitude: routeParams.longitudeTo,
+					}}
+					apikey="AIzaSyBwJpOTDp1D6GOSGdGTATiCSN84gFEzuJE"
+					strokeWidth={6}
+                    strokeColor="red"
+					onStart={(params) => {
+						console.log('route started', params)
+                    }}
+                    onReady={(result ) => {
+                        console.log(result)
+                    }}
 				/>
 			</MapView>
 
