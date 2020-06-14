@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View, TouchableOpacity, ScrollView } from 'react-native'
+import { Text, View, TouchableOpacity, ScrollView, Image} from 'react-native'
 import styles from './styles'
 
 export default function App() {

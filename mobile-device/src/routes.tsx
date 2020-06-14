@@ -13,6 +13,14 @@ import IOSIcon from 'react-native-vector-icons/Ionicons'
 import SideBarMenu from './components/SideMenu'
 import Recompensas from './pages/ListaRecompensas'
 import PostosGasolina from './pages/ListaPostosGasolina'
+import Avaliacao from './pages/Avaliacao'
+import AvisoAlimentacao from './pages/AvisoAlimentacao'
+import AvisoAlongamento from './pages/AvisoAlongamento'
+import AvisoDescanso from './pages/AvisoDescanso'
+import CadastroVeiculos from './pages/CadastroVeiculos'
+import CheckList from './pages/CheckList'
+import Perfil from './pages/Perfil'
+import PontosDeParada from './pages/PontodeParada'
 
 const AppStack = createStackNavigator()
 
@@ -38,7 +46,7 @@ const Routes = () => {
 							>
 								<TouchableOpacity
 									onPress={() =>
-										previous ? navigation.goBack() : navigation.navigate('SideBarMenu')
+										navigation.navigate('SideBarMenu')
 									}
 								>
 									{previous ? (
@@ -61,6 +69,14 @@ const Routes = () => {
 				<AppStack.Screen name="Map" component={Map} />
                 <AppStack.Screen name="Recompensas" component={Recompensas} />
                 <AppStack.Screen name="PostosGasolina" component={PostosGasolina} />
+				<AppStack.Screen name="Avaliacao" component={Avaliacao} />
+				<AppStack.Screen name="AvisoAlimentacao" component={AvisoAlimentacao} />
+				<AppStack.Screen name="AvisoAlongamento" component={AvisoAlongamento} />
+				<AppStack.Screen name="AvisoDescanso" component={AvisoDescanso} />
+				<AppStack.Screen name="CadastroVeiculos" component={CadastroVeiculos} />
+				<AppStack.Screen name="CheckList" component={CheckList} />
+				<AppStack.Screen name="Perfil" component={Perfil} />
+				<AppStack.Screen name="PontosDeParada" component={PontosDeParada} />
 				<AppStack.Screen name="SideBarMenu" component={SideBarMenu} />
 			</AppStack.Navigator>
 		</NavigationContainer>

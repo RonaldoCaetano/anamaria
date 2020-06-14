@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './styles'
 import { useNavigation } from '@react-navigation/native'
-import { ScrollView, Text, View, TouchableOpacity } from 'react-native'
+import { ScrollView, Text, View, TouchableOpacity , Image} from 'react-native'
 
 const SideMenu = () => {
     const navigation = useNavigation()
@@ -15,7 +15,7 @@ const SideMenu = () => {
 			<ScrollView>
 				<View>
                     <TouchableOpacity style={styles.navItem} onPress={() => navigateToScreen('Login')}>
-                        <Text style={styles.navItemText}>Login</Text>
+                        <Text style={styles.navItemText}>Sair</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.navItem} onPress={() => navigateToScreen('Jornadas')}>
                         <Text style={styles.navItemText}>Jornadas</Text>
@@ -32,10 +32,17 @@ const SideMenu = () => {
                     <TouchableOpacity style={styles.navItem} onPress={() => navigateToScreen('PostosGasolina')}>
                         <Text style={styles.navItemText}>Listar Postos de Gasolina</Text>
                     </TouchableOpacity>
+                    <TouchableOpacity style={styles.navItem} onPress={() => navigateToScreen('Perfil')}>
+                        <Text style={styles.navItemText}>Meu Perfil</Text>
+                    </TouchableOpacity>
 				</View>
 			</ScrollView>
 			<View style={styles.footerContainer}>
-				<Text>Ana Maria</Text>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+            <Image style={styles.logotipotruck} source={require('../../../assets/minitruck.png')} />
+            <Image style={styles.logotipo} source={require('../../../assets/logotipo.png')} />
+            </View>
+                
 			</View>
 		</View>
 	)
