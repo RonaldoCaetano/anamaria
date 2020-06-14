@@ -1,9 +1,10 @@
 import React from 'react'
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image } from 'react-native'
-
+import { useNavigation } from '@react-navigation/native'
 import styles from './styles'
 
 export default function App() {
+    const navigation = useNavigation()
   return (
     <View style={styles.container}>
       <Image
@@ -55,8 +56,8 @@ export default function App() {
       <TouchableOpacity style={styles.salvarBtn}>
         <Text style={styles.cadastrarText}>ADICIONAR VEÍCULO</Text>
       </TouchableOpacity>
-      <TouchableOpacity>
-        <Text style={styles.cadastrarText}>Voltar</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('Perfil')}>
+        <Text style={styles.cadastrarText} >Voltar</Text>
       </TouchableOpacity>
     </View>
   )
