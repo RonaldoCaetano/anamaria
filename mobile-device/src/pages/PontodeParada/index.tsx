@@ -6,11 +6,11 @@ import { useNavigation } from '@react-navigation/native'
 
 export default function App() {
 
-    const [phone, setPhone] = useState<string>('')
+    const [phone, setPhone] = useState<string>('11997049551')
     const navigation = useNavigation()
 
     function handleWhatsapp() {
-        Linking.openURL(`whatsapp://send?phone=+55${phone}&text=Olá tudo bem?`)
+        Linking.openURL(`whatsapp://send?phone=55${phone}&text=Olá tudo bem?`)
     }
 
 	return (
@@ -22,9 +22,10 @@ export default function App() {
 
 			<View style={styles.inputView} >
 				<TextInput
-					style={styles.inputText}
-					value="11997049551"
-                    placeholderTextColor="#FFF" 
+                    style={styles.inputText}
+                    defaultValue="11997049551"
+                    value="11997049551"
+                    placeholderTextColor="#FFF"
                     onChangeText={setPhone}
                 />
 			</View>
