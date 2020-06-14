@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image } from 'react-native'
+import { Text, View, TextInput, TouchableOpacity, Image } from 'react-native'
 
 import styles from './styles'
 import { useNavigation } from '@react-navigation/native'
@@ -13,8 +13,8 @@ export default function App() {
         source={require('../../../assets/perfil.png')}
       />
 
-     <Text style={styles.cadastrarHeaderText}>Seu Pefil</Text>
-
+			<Text style={styles.cadastrarHeaderText}>Seu Pefil</Text>
+    
      <View style={styles.inputView} >
         <TextInput
           style={styles.inputText}

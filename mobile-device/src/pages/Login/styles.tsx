@@ -22,7 +22,8 @@ export default StyleSheet.create({
 	},
 	inputText: {
 		height: 50,
-		color: 'white',
+        color: 'white',
+        position: 'relative'
 	},
 	forgot: {
 		color: 'white',

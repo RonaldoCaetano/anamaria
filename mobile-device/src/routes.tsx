@@ -33,26 +33,27 @@ const Routes = () => {
 					cardStyle: {
 						backgroundColor: '#f0f0f5',
 					},
-					header: ({ navigation, previous, scene }) => {
+					header: ({ navigation, scene }: any) => {
+						const { name } = scene.route
 						return (
 							<View
 								style={{
-									marginTop: 30,
+									marginTop: 35,
 									width: '100%',
 									paddingLeft: 10,
 									backgroundColor: '#ffa608',
-									display: scene.route.name === 'Login' ? 'none' : 'flex',
+									display: name === 'Login' || name === 'Cadastro' ? 'none' : 'flex',
 								}}
 							>
-								<TouchableOpacity
-									onPress={() =>
-										navigation.navigate('SideBarMenu')
-									}
-								>
-									{previous ? (
-										<IOSIcon name="ios-close" size={40} />
+								<TouchableOpacity>
+									{name === 'SideBarMenu' ? (
+										<IOSIcon name="ios-close" size={40} onPress={() => navigation.goBack()} />
 									) : (
-										<IOSIcon name="ios-menu" size={40} />
+										<IOSIcon
+											name="ios-menu"
+											size={40}
+											onPress={() => navigation.navigate('SideBarMenu')}
+										/>
 									)}
 								</TouchableOpacity>
 							</View>
@@ -67,8 +68,8 @@ const Routes = () => {
 				<AppStack.Screen name="PontosParadas" component={PontosParadas} />
 				<AppStack.Screen name="RouteSelection" component={RouteSelection} />
 				<AppStack.Screen name="Map" component={Map} />
-                <AppStack.Screen name="Recompensas" component={Recompensas} />
-                <AppStack.Screen name="PostosGasolina" component={PostosGasolina} />
+				<AppStack.Screen name="Recompensas" component={Recompensas} />
+				<AppStack.Screen name="PostosGasolina" component={PostosGasolina} />
 				<AppStack.Screen name="Avaliacao" component={Avaliacao} />
 				<AppStack.Screen name="AvisoAlimentacao" component={AvisoAlimentacao} />
 				<AppStack.Screen name="AvisoAlongamento" component={AvisoAlongamento} />
