@@ -53,7 +53,23 @@ export default StyleSheet.create({
     },
     card: {
         width: "95%",
-        backgroundColor: "#465881",
+        backgroundColor: "#b3433a",
+        borderRadius: 15,
+        marginBottom: 20,
+        justifyContent: "center",
+        padding: 20
+    },
+    cardverde: {
+        width: "95%",
+        backgroundColor: "#3ab37c",
+        borderRadius: 15,
+        marginBottom: 20,
+        justifyContent: "center",
+        padding: 20
+    },
+    cardamarelo: {
+        width: "95%",
+        backgroundColor: "#acb93f",
         borderRadius: 15,
         marginBottom: 20,
         justifyContent: "center",

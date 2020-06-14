@@ -1,10 +1,12 @@
 import React from 'react'
 import { Text, View, TextInput, TouchableOpacity, Image } from 'react-native'
 import { Rating, AirbnbRating } from 'react-native-ratings';
+import { useNavigation } from '@react-navigation/native'
 
 import styles from './styles'
 
 export default function App() {
+	const navigation = useNavigation()
 	return (
 		<View style={styles.container}>
 			<Image style={styles.logotipo} source={require('../../../assets/pontosdeparada.png')} />
@@ -29,8 +31,8 @@ export default function App() {
 			<TouchableOpacity style={styles.esquecerBtn}>
 				<Text style={styles.esquecerText}>Enviar Avaliação</Text>
 			</TouchableOpacity>
-			<TouchableOpacity>
-				<Text style={styles.esquecerText}>Voltar</Text>
+			<TouchableOpacity onPress={() => navigation.navigate('PontosParadas')}>
+				<Text style={styles.esquecerText} >Voltar</Text>
 			</TouchableOpacity>
 
 		</View>

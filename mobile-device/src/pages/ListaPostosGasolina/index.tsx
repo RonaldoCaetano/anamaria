@@ -23,6 +23,7 @@ export default function App() {
 
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
             <Text style={styles.esquecerText}>Cidade: Barueri -SP</Text>
+            <Text style={styles.esquecerText}>Valor: R$ 3,43</Text>
           </View>
 
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
@@ -42,11 +43,12 @@ export default function App() {
 
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
           <Image style={styles.logotipo} source={require('../../../assets/postosgasolina.png')} />
-            <Text style={styles.esquecerHeaderText}>POSTO - IPIRAN 2</Text>
+            <Text style={styles.esquecerHeaderText}>POSTO - IPIRAN 2</Text>        
           </View>
 
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
             <Text style={styles.esquecerText}>Cidade: Barueri -SP</Text>
+            <Text style={styles.esquecerText}>Valor: R$ 3,44</Text>
           </View>
 
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
@@ -71,6 +73,7 @@ export default function App() {
 
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
             <Text style={styles.esquecerText}>Cidade: Barueri -SP</Text>
+            <Text style={styles.esquecerText}>Valor: R$ 3,70</Text>
           </View>
 
           <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
