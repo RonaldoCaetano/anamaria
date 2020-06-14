@@ -16,7 +16,7 @@ export default function App() {
 				</RectButton>
 
 				<TouchableOpacity>
-					<View style={styles.card}>
+					<View style={styles.cardamarelo}>
 						<View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
 							<Text style={styles.esquecerHeaderText}>15/06/2020</Text>
 							<TouchableOpacity style={styles.buttonEmAndamento}>
@@ -41,7 +41,7 @@ export default function App() {
 				</TouchableOpacity>
 
 				<TouchableOpacity>
-					<View style={styles.card}>
+					<View style={styles.cardverde}>
 						<View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
 							<Text style={styles.esquecerHeaderText}>19/06/2020</Text>
 							<TouchableOpacity style={styles.buttonInicio}>
@@ -66,7 +66,7 @@ export default function App() {
 				</TouchableOpacity>
 
 				<TouchableOpacity>
-					<View style={styles.card}>
+					<View style={styles.cardamarelo}>
 						<View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
 							<Text style={styles.esquecerHeaderText}>22/06/2020</Text>
 							<TouchableOpacity style={styles.buttonInicio}>
