@@ -1,11 +1,14 @@
 # anamaria
 
-First of all run `npm install` to install all dependencies 
+Para realizar os testes no app, primeiramente devemos dar um `npm install` dentro das pastas: **mobile-device** e **backend**.
 
-To run the application, on your terminal type this command: 
+Após isso, devemos, dentro da pasta backend, rodar o comando `npm run dev` para estar o servidor local que contem as apis
 
-`npm run start`
+Com o backend rodando, vamos na pasta `device-mobile` e rodamos o comando `npm start` para iniciar a compilação dos arquivos mobile
 
-It will start the application and a new window will be open on your browser.
+Um último passo para que todas as apis funcionem corretamente, você precisa trocar o **ip** que estã inserido dentro do arquivo `api.ts`, no caso apenas substituir pelo seu.
 
-You can scan the QRCode with your phone to test it.
+## Workspace setup
+
+- Node: 13.8.0
+- npm: 6.13.6
