@@ -23,11 +23,27 @@ const Routes = () => {
 					cardStyle: {
 						backgroundColor: '#f0f0f5',
 					},
-					header: ({ navigation, previous }) => {
+					header: ({ navigation, previous, scene }) => {
 						return (
-							<View style={{ marginTop: 30, width: '100%', paddingLeft: 10, backgroundColor: '#ffa608' }}>
-								<TouchableOpacity onPress={() => previous ? navigation.goBack() : navigation.navigate('SideBarMenu')}>
-									{previous ? <IOSIcon name="ios-close" size={40} /> : <IOSIcon name="ios-menu" size={40} />}
+							<View
+								style={{
+									marginTop: 30,
+									width: '100%',
+									paddingLeft: 10,
+									backgroundColor: '#ffa608',
+									display: scene.route.name === 'Login' ? 'none' : 'flex',
+								}}
+							>
+								<TouchableOpacity
+									onPress={() =>
+										previous ? navigation.goBack() : navigation.navigate('SideBarMenu')
+									}
+								>
+									{previous ? (
+										<IOSIcon name="ios-close" size={40} />
+									) : (
+										<IOSIcon name="ios-menu" size={40} />
+									)}
 								</TouchableOpacity>
 							</View>
 						)
