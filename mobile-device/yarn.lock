@@ -2735,6 +2735,11 @@ gensync@^1.0.0-beta.1:
   resolved "https://registry.yarnpkg.com/gensync/-/gensync-1.0.0-beta.1.tgz#58f4361ff987e5ff6e1e7a210827aa371eaac269"
   integrity sha512-r8EC6NO1sngH/zdD9fiRDLdcgnbayXah+mLgManTaIZJqEC1MZstmnox8KpnI2/fxQwrp5OpCOYWLp4rBl4Jcg==
 
+geolib@^2.0.24:
+  version "2.0.24"
+  resolved "https://registry.yarnpkg.com/geolib/-/geolib-2.0.24.tgz#eb3d7fbc65f5ea3354a5af6054563ebe9f33e5f4"
+  integrity sha512-NR0AyYyEnGrFS9JvSFmmotQDxVCORJgDHdvBwSatxl5aHarOLMh3KuGI83bCvCfObjfoEiDe8Ung8GGLGAtthw==
+
 get-caller-file@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-1.0.3.tgz#f978fa4c90d1dfe7ff2d6beda2a515e713bdcf4a"
@@ -4388,6 +4393,11 @@ react-is@^16.12.0, react-is@^16.13.0, react-is@^16.8.1, react-is@^16.8.4:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-native-geocoding@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/react-native-geocoding/-/react-native-geocoding-0.4.0.tgz#e22c97500bfccc25273499ab3af87c27ac6ede8f"
+  integrity sha512-iXIqdLHDGVyhWLJyWGRFRdvQa3hDQoCX4MLwKA9zja3gQxZ91v51CLGrbvxCckOGzoxu2/WA6e8TM74rrPxlsA==
+
 react-native-gesture-handler@~1.6.0:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-1.6.1.tgz#678e2dce250ed66e93af409759be22cd6375dd17"
@@ -4403,10 +4413,27 @@ react-native-iphone-x-helper@^1.2.1:
   resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.2.1.tgz#645e2ffbbb49e80844bb4cbbe34a126fda1e6772"
   integrity sha512-/VbpIEp8tSNNHIvstuA3Swx610whci1Zpc9mqNkqn14DkMbw+ORviln2u0XyHG1kPvvwTNGZY6QpeFwxYaSdbQ==
 
+react-native-maps-navigation@^0.0.14:
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/react-native-maps-navigation/-/react-native-maps-navigation-0.0.14.tgz#f51bada3269ca81ea256fb6201a04037441a5488"
+  integrity sha512-B2mDzyjHdjzelXtI/ovPysrbVq/M5vjmYDWdmHj3w8j93n//zpVMICLGurz390kysdvxjxxs/zAN2RlZmbkq/g==
+  dependencies:
+    geolib "^2.0.24"
+    prop-types "^15.6.2"
+    react-native-optiongroup "^0.0.7"
+
 react-native-maps@0.26.1:
   version "0.26.1"
   resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.26.1.tgz#6ec316259b38d259c8974448d894bd7a23101da4"
   integrity sha512-p4VTB8YB5ZmOmDRCUpoHZkm05amZwhIo04AJMBbB9+JAR2PNNfpo0vceoWX0Mag4wnePkdzPomeWMplr/wimTg==
+
+react-native-optiongroup@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/react-native-optiongroup/-/react-native-optiongroup-0.0.7.tgz#05144c577dae849efa7877002df8546836503b47"
+  integrity sha512-y1uqlgzqId/YNSooHSBVM5MkFnrhnRKK/0Vjumoh/Pk7EjB7P2bFYaq4/9NJpH9XpJuGcIickmt62Rk3kzSUHg==
+  dependencies:
+    lodash "^4.17.4"
+    prop-types "^15.6.0"
 
 react-native-reanimated@~1.7.0:
   version "1.7.1"
