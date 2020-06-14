@@ -25,7 +25,7 @@ export default function App() {
 			<TouchableOpacity>
 				<Text style={styles.forgot}>Esqueceu a senha?</Text>
 			</TouchableOpacity>
-			<RectButton style={styles.loginBtn} onPress={() => navigation.navigate('RouteSelection')}>
+			<RectButton style={styles.loginBtn} onPress={() => navigation.navigate('Jornadas')}>
 				<Text style={styles.loginText}>ENTRAR</Text>
 			</RectButton>
             <TouchableOpacity>
