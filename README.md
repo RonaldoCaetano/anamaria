@@ -1,4 +1,4 @@
-# anamaria
+# AnaMaria
 
 Para realizar os testes no app, primeiramente devemos dar um `npm install` dentro das pastas: **mobile-device** e **backend**.
 
