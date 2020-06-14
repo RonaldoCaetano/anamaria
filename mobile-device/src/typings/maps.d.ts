@@ -29,3 +29,9 @@ interface LocationForMap {
     latitudeTo?: number
     longitudeTo?: number
 }
+
+interface SOSNumberResponse {
+    id: number,
+    nom_concessionaria: string
+    num_telefone: string
+}

@@ -11,8 +11,6 @@ const MapComponent = () => {
 	const route = useRoute()
 	const routeParams: any = route.params
 
-	console.log(routeParams)
-
 	if (!routeParams.latitudeTo) {
 		return <></>
 	}
@@ -64,7 +62,7 @@ const MapComponent = () => {
 				/>
 			</MapView>
 
-			<RectButton style={styles.button} onPress={() => console.log('clicked')}>
+			<RectButton style={styles.button} onPress={() => navigation.navigate('SOSNumbers', { state: "São Paulo" })}>
 				<Text style={styles.buttonText}>SOS</Text>
 			</RectButton>
 		</View>
