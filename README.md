@@ -8,7 +8,7 @@ Com o backend rodando, vamos na pasta `device-mobile` e rodamos o comando `npm s
 
 Um último passo para que todas as apis funcionem corretamente, você precisa trocar o **ip** que estã inserido dentro do arquivo `api.ts`, no caso apenas substituir pelo seu.
 
-Obs: Mantenha a porta 3333, dentro do arquivo `api.ts`, pois o backend está rodando nessa porta.
+*Obs: Mantenha a porta 3333, dentro do arquivo `api.ts`, pois o backend está rodando nessa porta.*
 
 ## Workspace setup
 
