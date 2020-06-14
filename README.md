@@ -1,5 +1,9 @@
 # AnaMaria
 
+O nome é inspirado na giria utilizada por muitos caminhoneiros, que é o principal foco deste projeto, que segnifica AM (Amplitude modulada)
+
+## Como utilizar
+
 Para realizar os testes no app, primeiramente devemos dar um `npm install` dentro das pastas: **mobile-device** e **backend**.
 
 Após isso, devemos, dentro da pasta backend, rodar o comando `npm run dev` para estar o servidor local que contem as apis
