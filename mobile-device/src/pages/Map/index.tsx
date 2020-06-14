@@ -44,7 +44,7 @@ const MapComponent = () => {
 						longitude: routeParams.locationForMap.longitudeTo,
                     }}
                     apikey="AIzaSyBwJpOTDp1D6GOSGdGTATiCSN84gFEzuJE"
-                    strokeWidth={3}
+                    strokeWidth={5}
                     strokeColor="hotpink"
 				/>
 			</MapView>
