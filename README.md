@@ -1,6 +1,6 @@
 # AnaMaria
 
-O nome é inspirado na giria utilizada por muitos caminhoneiros, que é o principal foco deste projeto, que segnifica AM (Amplitude modulada)
+O nome é inspirado na giria utilizada por muitos caminhoneiros, que segnifica AM (Amplitude modulada)
 
 ## Como utilizar
 
