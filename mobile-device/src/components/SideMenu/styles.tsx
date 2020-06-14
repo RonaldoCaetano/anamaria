@@ -23,6 +23,14 @@ export default StyleSheet.create({
 	},
 	footerContainer: {
 		padding: 20,
-		backgroundColor: 'lightgrey',
+		backgroundColor: '#003f5c',
+	},
+	logotipo: {
+		width: 100,
+		height: 50,
+	},
+	logotipotruck: {
+		width: 50,
+		height: 50,
 	},
 })
