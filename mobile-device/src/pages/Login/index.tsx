@@ -77,7 +77,7 @@ export default function App() {
                     </RectButton>
                 </>
 			)}
-			<TouchableOpacity>
+			<TouchableOpacity onPress={() => navigation.navigate('Cadastro')}>
 				<Text style={styles.loginText}>Cadastrar</Text>
 			</TouchableOpacity>
 		</View>
