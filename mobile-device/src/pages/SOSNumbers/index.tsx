@@ -1,5 +1,5 @@
 import React, { useEffect, useState, FunctionComponent } from 'react'
-import { View, Text, ScrollView, Linking } from 'react-native'
+import { View, Text, ScrollView, Linking, AsyncStorage } from 'react-native'
 import api from './../../api'
 
 import styles from './styles'
@@ -16,8 +16,15 @@ const SOSNumbers: FunctionComponent<SOSNumbersProps> = () => {
     const routeParams: any = useRoute().params
 
     useEffect(() => {
-        api.get(`/sos/${routeParams.state}`).then(({ data }) => {
-            setSosNumbers(data)
+        AsyncStorage.getItem('SOSNumbers', (err, result) => {
+            if (!result) {
+                api.get(`/sos/${routeParams.state}`).then(({ data }) => {
+                    setSosNumbers(data)
+                    AsyncStorage.setItem('SOSNumbers', JSON.stringify(data))
+                })
+            } else {
+                setSosNumbers(JSON.parse(result))
+            }
         })
     }, [])
 
