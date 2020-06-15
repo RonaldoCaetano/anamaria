@@ -18,3 +18,7 @@ Um último passo para que todas as apis funcionem corretamente, você precisa tr
 
 - Node: 13.8.0
 - npm: 6.13.6
+
+## Observações
+
+As funcionalidades do mapa não irão funcionaar, por que precisamos remover a api do google por segurança. Caso queira testar, é necessário a inserção da mesma onde temos a frase **"YOUR_API_KEY"**
