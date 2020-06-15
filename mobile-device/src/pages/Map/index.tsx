@@ -50,7 +50,7 @@ const MapComponent = () => {
 						latitude: routeParams.latitudeTo,
 						longitude: routeParams.longitudeTo,
 					}}
-					apikey="AIzaSyBwJpOTDp1D6GOSGdGTATiCSN84gFEzuJE"
+					apikey="YOUR_APY_KEY"
 					strokeWidth={6}
                     strokeColor="red"
 					onStart={(params) => {
