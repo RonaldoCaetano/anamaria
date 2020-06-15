@@ -9,7 +9,7 @@ const RouteSelection = () => {
 	const [destination, setDestination] = useState<string>('')
 	const [initialLocationForMap, setInitialLocationForMap] = useState<LocationForMap>()
 	const [loading, setLoading] = useState<boolean>(false)
-	const key = 'AIzaSyBwJpOTDp1D6GOSGdGTATiCSN84gFEzuJE'
+	const key = 'YOUR_APY_KEY'
 	const navigation = useNavigation()
 
 	function defineInitialPosition() {
